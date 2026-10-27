@@ -1,0 +1,53 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /home/iago/test/senac/qualidade-software/aula-11-testes-unitarios/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /home/iago/test/senac/qualidade-software/aula-11-testes-unitarios
+collecting ... collected 7 items
+
+tests/test_pedido.py::test_calcula_total_de_varios_itens PASSED          [ 14%]
+tests/test_pedido.py::test_retorna_zero_quando_lista_esta_vazia PASSED   [ 28%]
+tests/test_pedido.py::test_rejeita_item_com_preco_zero PASSED            [ 42%]
+tests/test_pedido.py::test_rejeita_item_com_quantidade_zero PASSED       [ 57%]
+tests/test_pedido.py::test_entrega_ate_3km FAILED                        [ 71%]
+tests/test_pedido.py::test_entrega_acima_3km FAILED                      [ 85%]
+tests/test_pedido.py::test_entrega_gratis FAILED                         [100%]
+
+=================================== FAILURES ===================================
+_____________________________ test_entrega_ate_3km _____________________________
+
+    def test_entrega_ate_3km():
+        distancia = 2
+        total_pedido = 50.00
+    
+>       resultado = calcular_taxa_entrega(distancia, total_pedido)
+                    ^^^^^^^^^^^^^^^^^^^^^
+E       NameError: name 'calcular_taxa_entrega' is not defined
+
+tests/test_pedido.py:48: NameError
+____________________________ test_entrega_acima_3km ____________________________
+
+    def test_entrega_acima_3km():
+        distancia = 2
+        total_pedido = 50.00
+    
+>       resultado = calcular_taxa_entrega(distancia, total_pedido)
+                    ^^^^^^^^^^^^^^^^^^^^^
+E       NameError: name 'calcular_taxa_entrega' is not defined
+
+tests/test_pedido.py:56: NameError
+_____________________________ test_entrega_gratis ______________________________
+
+    def test_entrega_gratis():
+        distancia = 5
+        total_pedido = 100.00
+    
+>       resultado = calcular_taxa_entrega(distancia, total_pedido)
+                    ^^^^^^^^^^^^^^^^^^^^^
+E       NameError: name 'calcular_taxa_entrega' is not defined
+
+tests/test_pedido.py:64: NameError
+=========================== short test summary info ============================
+FAILED tests/test_pedido.py::test_entrega_ate_3km - NameError: name 'calcular...
+FAILED tests/test_pedido.py::test_entrega_acima_3km - NameError: name 'calcul...
+FAILED tests/test_pedido.py::test_entrega_gratis - NameError: name 'calcular_...
+========================= 3 failed, 4 passed in 0.02s ==========================
