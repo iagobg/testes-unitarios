@@ -1,7 +1,7 @@
 ============================= test session starts ==============================
-platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /home/iago/test/senac/qualidade-software/aula-11-testes-unitarios/.venv/bin/python
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.7.0 -- /home/iago/test/senac/qualidade-software/testes-unitarios/.venv/bin/python
 cachedir: .pytest_cache
-rootdir: /home/iago/test/senac/qualidade-software/aula-11-testes-unitarios
+rootdir: /home/iago/test/senac/qualidade-software/testes-unitarios
 collecting ... collected 7 items
 
 tests/test_pedido.py::test_calcula_total_de_varios_itens PASSED          [ 14%]

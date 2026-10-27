@@ -50,12 +50,12 @@ def test_entrega_ate_3km():
     assert resultado == 5.00
         
 def test_entrega_acima_3km():
-    distancia = 2
+    distancia = 4
     total_pedido = 50.00
     
     resultado = calcular_taxa_entrega(distancia, total_pedido)
     
-    assert resultado == 5.00
+    assert resultado == 7.00
         
 def test_entrega_gratis():
     distancia = 5
